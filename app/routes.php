@@ -22,3 +22,7 @@ Route::get('tumblr', function(){
 Route::get('twitter', function(){
 	return View::make('twitter');
 });
+
+Route::get('twitter_post', function(){
+	echo('volvió de twitter');
+});
