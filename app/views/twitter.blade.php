@@ -4,7 +4,7 @@
     </head>
     <body>
         <div>
-            <form action="https://dev.twitter.com/docs/api/1/post/oauth/request_token" method="post">
+            <form action="https://api.twitter.com/oauth/request_token" method="post">
                 <input type="hidden" name="oauth_callback" value="{{ url('twitter_post') }}" />
                 <input type="submit" value="Login with Twitter" />
             </form>
