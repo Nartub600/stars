@@ -8,6 +8,7 @@
 
                     $.ajax({
                         url: 'http://www.tumblr.com/oauth/request_token',
+                        type: 'post',
                         dataType: 'jsonp',
                         data: {
                             oauth_callback: $('#urly').val()
