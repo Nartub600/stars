@@ -5,11 +5,12 @@
             $(function(){
                 $('#login_tumblr').on('click', function(e){
                     e.preventDefault();
+                    e.stopImmediatePropagation();
 
                     $.ajax({
                         url: 'http://www.tumblr.com/oauth/request_token',
                         type: 'post',
-                        dataType: 'jsonp',
+                        dataType: 'json',
                         data: {
                             oauth_callback: $('#urly').val()
                         },
