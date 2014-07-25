@@ -18,3 +18,7 @@ Route::get('/', function(){
 Route::get('tumblr', function(){
 	return View::make('tumblr');
 });
+
+Route::get('twitter', function(){
+	return View::make('twitter');
+});
