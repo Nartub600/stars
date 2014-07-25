@@ -11,6 +11,7 @@
                         url: 'http://www.tumblr.com/oauth/request_token',
                         type: 'post',
                         dataType: 'json',
+                        crossDomain: true,
                         data: {
                             oauth_callback: $('#urly').val()
                         },
