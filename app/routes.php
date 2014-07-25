@@ -14,3 +14,7 @@
 Route::get('/', function(){
 	return View::make('hello');
 });
+
+Route::get('tumblr', function(){
+	return View::make('tumblr');
+});
