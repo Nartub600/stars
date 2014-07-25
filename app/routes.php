@@ -12,5 +12,5 @@
 */
 
 Route::get('/', function(){
-	return View::make('hello');
+	echo('vamos los pibes');
 });
