@@ -2,12 +2,22 @@
 
 class FacebookController extends BaseController {
 
-	public function loginHandler() {
-		$facebook = OAuth::consumer('Facebook', url('regreso'));
+    public function loginHandler() {
+        $code = Input::get('code');
 
-		$url = $facebook->getAuthorizationUri();
+        $fb = OAuth::consumer('Facebook');
 
-		return Redirect::to((string) $url);
-	}
+        if(!empty($code)) {
+            $token = $fb->requestAccessToken($code);
+
+            $result = json_decode($fb->request('/me'), true);
+
+            var_dump($result);
+        } else {
+            $url = $facebook->getAuthorizationUri();
+
+            return Redirect::to((string) $url);
+        }
+    }
 
 }

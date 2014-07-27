@@ -3,13 +3,26 @@
 class TumblrController extends BaseController {
 
     public function loginHandler() {
-        $tumblr = OAuth::consumer('Tumblr', url('regreso'));
+        $token  = Input::get('oauth_token');
+        $verify = Input::get('oauth_verifier');
 
-        $reqToken = $tumblr->requestRequestToken();
+        $tumblr = OAuth::consumer('Tumblr');
 
-        $url = $tumblr->getAuthorizationUri(array('oauth_token' => $reqToken->getRequestToken()));
+        if(!empty($token) && !empty($verify)) {
+            $token = $tumblr->requestAccessToken($token, $verify);
 
-        return Redirect::to((string) $url);
+            $result = json_decode($tumblr->request('account/verify_credentials.json'), true);
+
+            var_dump($result)
+        } else {
+            $reqToken = $tumblr->requestRequestToken();
+
+            $url = $tumblr->getAuthorizationUri(array(
+                'oauth_token' => $reqToken->getRequestToken()
+            ));
+
+            return Redirect::to((string) $url);
+        }
     }
 
 }
