@@ -3,10 +3,11 @@
 class TumblrController extends BaseController {
 
     public function loginHandler() {
-        $tumblr = $tw = OAuth::consumer('Tumblr');
-        $token = $tumblr->requestRequestToken();
+        $tumblr = OAuth::consumer('Tumblr');
 
-        $url = $tumblr->getAuthorizationUri(array('oauth_token' => $token->getRequestToken()));
+        $reqToken = $tumblr->requestRequestToken();
+
+        $url = $tumblr->getAuthorizationUri(array('oauth_token' => $reqToken->getRequestToken()));
 
         return Redirect::to((string) $url);
     }
