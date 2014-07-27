@@ -20,3 +20,12 @@ Route::get('facebook', 'FacebookController@loginHandler');
 Route::get('tumblr', 'TumblrController@loginHandler');
 
 Route::get('twitter', 'TwitterController@loginHandler');
+
+Route::get('regreso', function(){
+	$code = Input::get( 'code' );
+	$token = Input::get( 'oauth_token' );
+    $verify = Input::get( 'oauth_verifier' );
+    var_dump($code);
+    var_dump($token);
+    var_dump($verify);
+});
