@@ -13,7 +13,7 @@ class TwitterController extends BaseController {
 
             $result = json_decode($tw->request('account/verify_credentials.json'), true);
 
-            var_dump($result)
+            var_dump($result);
         } else {
             $reqToken = $tw->requestRequestToken();
 

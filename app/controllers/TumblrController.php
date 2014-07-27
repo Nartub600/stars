@@ -13,7 +13,7 @@ class TumblrController extends BaseController {
 
             $result = json_decode($tumblr->request('account/verify_credentials.json'), true);
 
-            var_dump($result)
+            var_dump($result);
         } else {
             $reqToken = $tumblr->requestRequestToken();
 
