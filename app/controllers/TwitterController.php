@@ -3,7 +3,14 @@
 class TwitterController extends BaseController {
 
 	public function loginHandler() {
-		return View::make('hello');
+		$twitter = $tw = OAuth::consumer('Twitter');
+        $reqToken = $twitter->requestRequestToken();
+
+        // get Authorization Uri sending the request token
+        $url = $twitter->getAuthorizationUri(array('oauth_token' => $reqToken->getRequestToken()));
+
+        // return to twitter login url
+        return Redirect::to((string) $url);
 	}
 
 }
