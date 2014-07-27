@@ -8,8 +8,7 @@ class TwitterController extends BaseController {
         $reqToken = $tw->requestRequestToken();
 
         $url = $tw->getAuthorizationUri(array(
-        	'oauth_token' => $reqToken->getRequestToken(),
-        	'oauth_callback' => url('regreso')
+        	'oauth_token' => $reqToken->getRequestToken()
     	));
 
         return Redirect::to((string) $url);
