@@ -15,20 +15,8 @@ Route::get('/', function(){
 	return View::make('hello');
 });
 
+Route::get('facebook', 'FacebookController@loginHandler');
+
 Route::get('tumblr', 'TumblrController@loginHandler');
 
-Route::get('twitter', function(){
-	$tw = OAuth::consumer('Twitter');
-
-	$reqToken = $tw->requestRequestToken();
-
-	// get Authorization Uri sending the request token
-	$url = $tw->getAuthorizationUri(array('oauth_token' => $reqToken->getRequestToken()));
-
-	// return to twitter login url
-	return Redirect::to((string) $url);
-});
-
-Route::get('twitter_post', function(){
-	echo('volvió de twitter');
-});
+Route::get('twitter', 'TwitterController@loginHandler');

@@ -3,7 +3,9 @@
 class FacebookController extends BaseController {
 
 	public function loginHandler() {
-		return View::make('hello');
+		$url = $fb->getAuthorizationUri();
+
+		return Redirect::to((string) $url);
 	}
 
 }

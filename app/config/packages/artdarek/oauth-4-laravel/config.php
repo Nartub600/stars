@@ -7,8 +7,8 @@ return array(
     'consumers' => array(
 
         'Facebook' => array(
-            'client_id'     => '',
-            'client_secret' => '',
+            'client_id'     => '1519667261600765',
+            'client_secret' => '7d8c1e8075ebf04152b454f4fa25e7e8',
             'scope'         => array(),
         ),
 
