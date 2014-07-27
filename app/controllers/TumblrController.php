@@ -22,7 +22,7 @@ class TumblrController extends BaseController {
 
             return Redirect::to((string) $url);
         } else {
-            $url = $currentUri->getRelativeUri() . '?go=go';
+            $url = URL::current() . '?go=go';
             echo "<a href='$url'>Login with Tumblr!</a>";
         }
     }
