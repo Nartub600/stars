@@ -3,7 +3,7 @@
 class TwitterController extends BaseController {
 
 	public function loginHandler() {
-		$tw = OAuth::consumer('Twitter');
+		$tw = OAuth::consumer('Twitter', url('regreso'));
 
         $reqToken = $tw->requestRequestToken();
 
