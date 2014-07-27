@@ -20,7 +20,9 @@ Route::get('tumblr', function(){
 });
 
 Route::get('twitter', function(){
-	return View::make('twitter');
+    $tw = OAuth::consumer('Twitter');
+    $token = $tw->requestRequestToken();
+    // var_dump($token);
 });
 
 Route::get('twitter_post', function(){
