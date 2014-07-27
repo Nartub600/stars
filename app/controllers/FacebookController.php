@@ -14,7 +14,7 @@ class FacebookController extends BaseController {
 
             var_dump($result);
         } else {
-            $url = $facebook->getAuthorizationUri();
+            $url = $fb->getAuthorizationUri();
 
             return Redirect::to((string) $url);
         }
