@@ -15,15 +15,12 @@ class TumblrController extends BaseController {
             $result = json_decode($tumblr->request('user/info'));
 
             var_dump($result);
-        } else if(!empty($go) && $go === 'go') {
+        } else {
             $token = $tumblr->requestRequestToken();
 
             $url = $tumblr->getAuthorizationUri(array('oauth_token' => $token->getRequestToken()));
 
             return Redirect::to((string) $url);
-        } else {
-            $url = URL::current() . '?go=go';
-            echo "<a href='$url'>Login with Tumblr!</a>";
         }
     }
 
