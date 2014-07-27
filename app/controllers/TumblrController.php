@@ -16,9 +16,9 @@ class TumblrController extends BaseController {
 
             var_dump($result);
         } else if(!empty($go) && $go === 'go') {
-            $token = $tumblrService->requestRequestToken();
+            $token = $tumblr->requestRequestToken();
 
-            $url = $tumblrService->getAuthorizationUri(array('oauth_token' => $token->getRequestToken()));
+            $url = $tumblr->getAuthorizationUri(array('oauth_token' => $token->getRequestToken()));
 
             return Redirect::to((string) $url);
         } else {
