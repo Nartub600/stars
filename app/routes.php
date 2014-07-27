@@ -20,9 +20,15 @@ Route::get('tumblr', function(){
 });
 
 Route::get('twitter', function(){
-    $tw = OAuth::consumer('Twitter');
-    $token = $tw->requestRequestToken();
-    var_dump($token);
+	$tw = OAuth::consumer('Twitter');
+
+	$reqToken = $tw->requestRequestToken();
+
+	// get Authorization Uri sending the request token
+	$url = $tw->getAuthorizationUri(array('oauth_token' => $reqToken->getRequestToken()));
+
+	// return to twitter login url
+	return Redirect::to((string) $url);
 });
 
 Route::get('twitter_post', function(){
