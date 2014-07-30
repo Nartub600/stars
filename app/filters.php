@@ -11,14 +11,12 @@
 |
 */
 
-App::before(function($request)
-{
-	//
+App::before(function($request) {
+	Session::put('ip_address', Request::getClientIp());
 });
 
 
-App::after(function($request, $response)
-{
+App::after(function($request, $response) {
 	//
 });
 

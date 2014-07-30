@@ -14,7 +14,23 @@ class TwitterController extends BaseController {
 
             $result = json_decode($tw->request('account/verify_credentials.json'), true);
 
-            var_dump($result);
+            $user = User::where(array(
+                'social_network' => 'twitter',
+                'social_network_id' => $result['id']
+            ))->first();
+
+            if($user) {
+                echo('Existent'); echo('<br>');
+            } else {
+                $user = User::create(array(
+                    'social_network' => 'twitter',
+                    'social_network_id' => $result['id'],
+                    'name' => $result['name']
+                ));
+                echo('Just created'); echo('<br>');
+            }
+
+            echo("Twitter user: $user->social_network_id");
         } else {
             $token = $tw->requestRequestToken();
 

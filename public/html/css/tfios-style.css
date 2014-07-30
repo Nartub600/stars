@@ -1,0 +1,386 @@
+body{
+    overflow: hidden;
+    font-family: 'litterbox_icgregular';
+}
+p{
+    font-family: 'litterbox_icgregular';
+    font-size: 12px;
+}
+.debug{
+    position: fixed;
+    width: 513px;
+    height: 638px;
+    background-image: url(../img/debug/login-02.jpg);
+    background-position-y: 138px;
+    z-index: 1055;
+    margin-left: 0;
+    left: 418px;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    display: none;
+}
+.content{
+    display: none;
+}
+.loading{
+    
+}
+.loading p{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+.header{
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 129px;
+    background: url(../img/headerBackground.png) center;
+}
+.header .logo{
+    position: fixed;
+    left: 10px;
+    top: 38px;
+    background: url(../img/logo.png);
+    width: 297px;
+    height: 81px;
+}
+.header .logo .text-01, .header .logo .text-02, .header .logo .text-03{
+    position: absolute;
+    top: 49px;
+    font-size: 17px;
+}
+.header .logo .text-01{
+    left: 8px;
+}
+.header .logo .text-02{
+    letter-spacing: 1px;
+    left: 124px;
+}
+.header .share-your-promise{
+    position: fixed;
+    right: 10px;
+    top: 38px;
+    background: url(../img/share-your-promise.png);
+    width: 181px;
+    height: 79px;
+    cursor: pointer;
+}
+.header .share-your-promise .text-01{
+    position: absolute;
+    top: 36px;
+    left: 42px;
+    width: 99px;
+    text-align: center;
+    font-size: 25px;
+}
+.header .share-your-promise .text-02{
+    position: absolute;
+    top: 18px;
+    left: 41px;
+    width: 99px;
+    font-size: 21px;
+    text-align: center;
+    color:#00aeef;
+}
+.header .logo .text-03{
+    left: 209px;
+    top: 52px;
+    text-align: center;
+    width: 75px;
+}
+.content-slider-drag{
+    position: fixed;
+    bottom: 30px;
+    width: 1325px;
+    background-image: url(../img/bg-slider-02.png);
+    height: 30px;
+    left: 50%;
+    margin-left: -662.5px;
+    width: 1325px;
+     z-index: 2;
+}
+
+.content-parallax{
+    position: fixed;
+    z-index: 1;
+}
+.content-parallax .layer-01{
+    position: absolute;
+    width: 5244px;
+    z-index: 1;
+}
+.content-parallax .layer-01, .content-parallax .layer-02, .content-parallax .layer-03, .content-parallax .layer-04{
+    position: absolute;
+    width: 5244px;
+    z-index: 1;
+    *-webkit-transition: all .3s linear;
+  *  -moz-transition: all .3s linear;
+   * -o-transition: all .3s linear;
+   * transition: all .3s linear;
+}
+.animarEasing{
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.content-parallax .layer-01 img, .content-parallax .layer-03 img, .content-parallax .layer-04 img{
+    position: relative;
+    float: left;
+}
+.content-parallax .layer-02{
+    position: absolute;
+    width: 9000px;
+    z-index: 2;
+}
+
+.content-parallax .layer-02 .sublayer{
+    position: relative;
+    float: left;
+   * background-color: #ef2929;
+    height: 600px;
+    width: 1800px;
+}
+.content-parallax .layer-02 .sublayer .top{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.content-parallax .layer-02 .sublayer .botoom{
+    position: absolute;
+    top: 238px;
+    right: 32px;
+}
+.content-parallax .layer-03{
+    position: absolute;
+    width: 5244px;
+    z-index: 1;
+}
+.content-parallax .layer-04{
+    position: absolute;
+    width: 5244px;
+    z-index: 1;
+}
+/* SLIDER */
+#sliderDrag{
+    position: relative;
+    left: 55px;
+    border: 0px;
+    top:15px;
+    width: 1215px;
+    background-image: none;
+    background-color: transparent !important;
+    cursor: pointer;
+    
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    cursor: pointer !important;
+}
+.ui-slider .ui-slider-handle:focus { 
+    outline: none !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 0px solid #d3d3d3 !important;
+    width: 34px !important;
+    height: 47px !important;
+    background: url("../img/bg-slider-01.png") 50% 50% repeat-x !important;
+    font-weight: normal;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -15px !important;
+    margin-left: -22.17px !important;
+}
+.ui-slider .ui-slider-handle {
+    height: 15px;
+    width: 5px;
+    padding-left: 5px; 
+}
+.ui-widget-header {
+    border: 0px solid #aaaaaa !important;
+    background: none !important;
+}
+/* FIN SLIDER */
+
+/* LOGIN */
+.login{
+    position: absolute;
+    background-image: url(../img/plate-01.png);
+    width: 540px;
+    height: 356px;
+    z-index: 30;
+    left: 50%;
+    margin-left: -270px;
+    top:50%;
+    margin-top: -178px;
+}
+.login .steeps{
+    background-image: url(../img/trail-01.png);
+    width: 268px;
+    height: 39px;
+    top: 47px;
+    position: relative;
+    left: 135px;
+    font-size: 14px;
+}
+.login .steep-01{
+    position: relative;
+    
+}
+.login .steep-02{
+    position: relative;
+    display: none;
+}
+.login .steeps li{
+    position: relative;
+    float: left;
+    top: 20px;
+    left: 31px;
+    font-size: 17px;
+    margin-right: 17px;
+    text-transform: uppercase;
+}
+.login .connet-width{
+    font-size: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    top: 85px;
+    left: -5px;
+    position: relative;
+    letter-spacing: 1.5px;
+}
+.content-socials-connects{
+    position: relative;
+    top: 87px;
+    left: 8px;
+    margin: 0 auto;
+    width: 272px;
+}
+.login .close-btn{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/close.png);
+    right: 37px;
+    top: 24px;
+    z-index: 30;
+}
+.login .close-btn:hover{
+    background-image: url(../img/close-over.png);
+}
+.fb-connect, .tw-connect, .tb-connect{
+    position: relative;
+    background-image: url(../img/fb-connect.png);
+    width: 94px;
+    height: 90px;
+    cursor: pointer;
+    border:0;
+    background-color: transparent;
+    outline: none;
+}
+.fb-connect:hover{
+    background-image: url(../img/fb-connect-over.png);
+}
+.tw-connect{
+    background-image: url(../img/tw-connect.png);
+}
+.tw-connect:hover{
+    background-image: url(../img/tw-connect-over.png);
+}
+.tb-connect{
+    background-image: url(../img/tb-connect.png);
+}
+.tb-connect:hover{
+    background-image: url(../img/tb-connect-over.png);
+}
+.margin-left-01{
+    margin-left: -12px
+}
+.steep-02 .text-01, .steep-02 .text-02, .steep-02 .text-03{
+    color: #fff;
+    position: relative;
+    text-align: center;
+    left: -3px;
+}
+.steep-02 .text-01{
+    top: 61px;
+    font-size: 38px;
+    text-transform: uppercase;
+    
+}
+.steep-02 .text-02{
+    font-size: 23px;
+top: 56px;
+text-transform: uppercase;
+}
+.steep-02 .text-03{
+    text-transform: uppercase;
+    color: #000;
+    top: 61px;
+    text-align: left;
+    left: 71px;
+    font-size: 21px;
+}
+.steep-02 textarea{
+    position: relative;
+    top: 70px;
+    left: 62px;
+    width: 396px;
+    height: 61px;
+    color:#00aeef;
+    font-family: 'Arial';
+    border-color: #00aeef;
+    resize:none;
+}
+.steep-02 .enter-zip{
+    position: absolute;
+    top: 143px;
+    left: 62px;
+    width: 85px;
+    padding: 2px;
+    height: 20px;
+    font-size: 15px;
+    color:#00aeef;
+    text-transform: uppercase;
+}
+.steep-02 ::-webkit-input-placeholder {
+   color:#00aeef;
+}
+
+.steep-02 :-moz-placeholder { /* Firefox 18- */
+   color:#00aeef;
+}
+
+.steep-02 ::-moz-placeholder {  /* Firefox 19+ */
+   color:#00aeef;
+}
+
+.steep-02 :-ms-input-placeholder {  
+   color:#00aeef; 
+}
+.steep-02 form{
+    top: -8px;
+    position: relative;
+    left: 6px;
+}
+.steep-02 .submit-promise{
+    border: 0;
+    background-image: url(../img/btn-submit-01.png);
+    width: 192px;
+    height: 34px;
+    position: absolute;
+    right: 67px;
+    top: 150px;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'litterbox_icgregular';
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 0px 0 3px 36px;
+}
+.steep-02 .submit-promise:hover{
+    color:#44c5f2;
+    background-image: url(../img/btn-submit-01-over.png);
+}
+/* FIN LOGIN */

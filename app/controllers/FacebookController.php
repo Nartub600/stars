@@ -12,7 +12,23 @@ class FacebookController extends BaseController {
 
             $result = json_decode($fb->request('/me'), true);
 
-            var_dump($result);
+            $user = User::where(array(
+                'social_network' => 'facebook',
+                'social_network_id' => $result['id']
+            ))->first();
+
+            if($user) {
+                echo('Existent'); echo('<br>');
+            } else {
+                $user = User::create(array(
+                    'social_network' => 'facebook',
+                    'social_network_id' => $result['id'],
+                    'name' => $result['name']
+                ));
+                echo('Just created'); echo('<br>');
+            }
+
+            echo("Facebook user: $user->social_network_id");
         } else {
             $url = $fb->getAuthorizationUri();
 

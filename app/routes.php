@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
 Route::get('/', function(){
 	return View::make('hello');
 });
@@ -20,3 +9,13 @@ Route::get('facebook', 'FacebookController@loginHandler');
 Route::get('tumblr', 'TumblrController@loginHandler');
 
 Route::get('twitter', 'TwitterController@loginHandler');
+
+Route::get('session', function(){
+	if(!App::environment('local')) { echo('<pre>'); }
+	var_dump(Session::all());
+});
+
+Route::get('migrate', function(){
+	define('STDIN',fopen("php://stdin","r"));
+	Artisan::call('migrate', ['--force' => true]);
+});

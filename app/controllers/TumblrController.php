@@ -12,9 +12,24 @@ class TumblrController extends BaseController {
         if(!empty($token)) {
             $token = $tumblr->requestAccessToken($token, $verify);
 
-            $result = json_decode($tumblr->request('user/info'));
+            $result = json_decode($tumblr->request('user/info'), true);
 
-            var_dump($result);
+            $user = User::where(array(
+                'social_network' => 'tumblr',
+                'name' => $result['response']['user']['name']
+            ))->first();
+
+            if($user) {
+                echo('Existent'); echo('<br>');
+            } else {
+                $user = User::create(array(
+                    'social_network' => 'tumblr',
+                    'name' => $result['response']['user']['name']
+                ));
+                echo('Just created'); echo('<br>');
+            }
+
+            echo("Tumblr user: $user->name");
         } else {
             $token = $tumblr->requestRequestToken();
 

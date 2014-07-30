@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'stars',
-			'username'  => 'forge',
-			'password'  => 'LJVbmjiBcZuRA6xpBPEn',
+			'host'      => 'internal-db.s13628.gridserver.com',
+			'database'  => 'db13628_tfios',
+			'username'  => 'db13628_projects',
+			'password'  => 'Mon0dig@mos!',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
