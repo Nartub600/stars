@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'litterbox_icgregular';
+    src: url('../fonts/litterbox-icg-regular.eot');
+    src: url('../fonts/litterbox-icg-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/litterbox-icg-regular.woff') format('woff'),
+         url('../fonts/litterbox-icg-regular.ttf') format('truetype'),
+         url('../fonts/litterbox-icg-regular.svg#litterbox_icgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Litterbox ICG';
+    src: url('../fonts/litterbox-icg-regular.eot');
+    src: url('../fonts/litterbox-icg-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/litterbox-icg-regular.woff') format('woff'),
+         url('../fonts/litterbox-icg-regular.ttf') format('truetype'),
+         url('../fonts/litterbox-icg-regular.svg#litterbox_icgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'midnight';
+    src: url('../fonts/midnightneue.eot');
+    src: url('../fonts/midnightneue.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/midnightneue.woff') format('woff'),
+         url('../fonts/midnightneue.ttf') format('truetype'),
+         url('../fonts/midnightneue.svg#midnight_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'midnight';
+    src: url('../fonts/midnightneuebold.eot');
+    src: url('../fonts/midnightneuebold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/midnightneuebold.woff') format('woff'),
+         url('../fonts/midnightneuebold.ttf') format('truetype'),
+         url('../fonts/midnightneuebold.svg#midnight_neuebold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Midnight Neue';
+    src: url('../fonts/midnightneuebold.eot');
+    src: url('../fonts/midnightneuebold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/midnightneuebold.woff') format('woff'),
+         url('../fonts/midnightneuebold.ttf') format('truetype'),
+         url('../fonts/midnightneuebold.svg#midnight_neuebold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'midnight';
+    src: url('../fonts/midnightneueitalic.eot');
+    src: url('../fonts/midnightneueitalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/midnightneueitalic.woff') format('woff'),
+         url('../fonts/midnightneueitalic.ttf') format('truetype'),
+         url('../fonts/midnightneueitalic.svg#midnight_neueitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}

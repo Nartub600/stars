@@ -7,22 +7,20 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
-	use UserTrait, RemindableTrait;
+	use UserTrait, RemindableTrait, SoftDeletingTrait;
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
 	protected $table = 'users';
 
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $hidden = array('password', 'remember_token');
+	protected $hidden = array('password', 'remember_token', 'email');
 
-	protected $fillable = array('social_network', 'social_network_id', 'name', 'email');
+	protected $fillable = array('social_network', 'social_network_id', 'name', 'email', 'profile_picture', 'official');
+
+	public function promise() {
+		return $this->hasOne('Promise', 'user_id', 'id');
+	}
+
+	public function zipData() {
+		return $this->hasOne('Zip', 'zip', 'zip');
+	}
 
 }

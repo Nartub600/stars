@@ -1,5 +1,11 @@
 <?php
 
+Route::filter('admin', function(){
+	if(!(Session::has('admin_user') && Session::get('admin_user') == 'yes')) {
+		return Redirect::to('admin/login');
+	}
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application & Route Filters
@@ -12,12 +18,12 @@
 */
 
 App::before(function($request) {
-	Session::put('ip_address', Request::getClientIp());
+
 });
 
 
 App::after(function($request, $response) {
-	//
+
 });
 
 /*

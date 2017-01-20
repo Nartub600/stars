@@ -5,7 +5,11 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"artdarek/oauth-4-laravel": "dev-master"
+		"artdarek/oauth-4-laravel": "dev-master",
+		"thujohn/share": "dev-master",
+		"soapbox/laravel-formatter": "dev-master",
+		"torann/geoip": "dev-master",
+		"aws/aws-sdk-php-laravel": "1.*"
 	},
 	"autoload": {
 		"classmap": [

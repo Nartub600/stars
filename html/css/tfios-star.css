@@ -1,0 +1,142 @@
+html, body{
+    outline: none;
+     -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+.content-stars{
+    position: absolute;
+    z-index: 500;
+    width: 800px;
+    height: 400px;
+    left: 50%;
+    margin-left: -400px;
+    top: 100px;
+}
+.visibility{
+    display: block;
+}
+.novisibility{
+    display: none;
+}
+.imgStar{
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    pointer-events:visible;
+    z-index: 1;
+}
+img[src=""] {
+   display: none;
+}
+
+.star{
+    position: absolute;
+    width: 138px;
+    height: 138px;
+    
+    background-color: transparent;
+}
+.star .mouseOverDiv{
+    position: absolute;
+    left: 43px;
+    top: 43px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    cursor: pointer;
+    pointer-events:visible;
+    background-color: transparent;
+    z-index: 1000;
+    
+}
+.star .close{
+    position: absolute;
+    left: 325px;
+    top: 25px;
+    z-index: 6;
+    display: none;
+    cursor: pointer;
+    background-image: url(../img/close-01.png);
+    width: 21px;
+    height: 21px;
+    pointer-events:visible;
+}
+.star .close:hover{
+    background-image: url(../img/close-02-over.png);
+}
+.star .content-preomisse{
+    position: absolute;
+    display: none;
+    z-index: 4;
+    left: 111px;
+    top: 43px;
+    width: 209px;
+}
+.star .content-preomisse .promisse{  
+    font-family: 'midnight';    
+    font-size: 13px; 
+}
+.star .content-preomisse .share{  
+    font-size: 15px;
+    width: 46px;
+    padding: 7px 0 7px 30px;
+    height: 15px;
+    display: block;
+    background-image: url(../img/share-background.png);
+    text-decoration: none;
+    color: #000;
+    position: absolute;
+    top: 48px;
+    left: 6px;
+}
+.star .starRotation{
+    position: absolute;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    left:58px;
+    top:58px;
+    /*
+    -webkit-animation: rotation 3s linear infinite;
+    -moz-animation: rotation 3s linear infinite;
+    -ms-animation: rotation 3s linear infinite;
+    */
+    z-index: 5;
+}
+.rotateOn{
+    -webkit-animation: rotation 3s linear infinite;
+    -moz-animation: rotation 3s linear infinite;
+    -ms-animation: rotation 3s linear infinite;
+}
+.star .user{
+    position: absolute;
+    position: absolute;
+    z-index: 4;
+    width: 74px;
+    left: 32px;
+    top: 31px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    opacity: 0;
+    z-index: 4;
+}
+@-webkit-keyframes rotation {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes rotation {
+    0%   { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); }
+}
+@-ms-keyframes rotation {
+    0%   { -ms-transform: rotate(0deg); }
+    100% { -ms-transform: rotate(360deg); }
+}
+.panelOpen{
+    position: absolute;
+    z-index: 1;
+    left: 77px;
+    top: 22px;
+}
+
+

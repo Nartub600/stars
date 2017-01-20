@@ -1,0 +1,40 @@
+[8/11/14, 11:07:48 PM] dutchmonaco2: sftp://173.236.192.150
+U: nwe_dm
+P: DutchMonaco!
+[8/11/14, 11:07:53 PM] dutchmonaco2: //home/nwe/digital.nwedev.com/projects/fhe/tfios/beta
+
+URL: http://173.236.192.150/projects/fhe/tfios/beta/
+http://digital.nwedev.com/projects/fhe/tfios/beta/site
+[8/11/14, 11:08:00 PM] dutchmonaco2:
+
+Dase de datos
+
+Host mysql.nwedev.com
+U/DB: nwe_tfios
+P: newwaveTFIOS!
+
+el php my admin que pediste:
+
+https://digital.nwedev.com/dh_phpmyadmin/mysql.nwedev.com/
+
+nwe_tfios / newwaveTFIOS!
+
+FB
+
+APPID: 720406431359430
+SECRET: 5f23265a4692d881d25e1fd44182dd18
+
+TW
+API key ybwqsB88PU848UwbXyakH8eqL
+        ybwqsB88PU848UwbXyakH8eqL
+API secret vWnRtLb657kWSkso2kOCwnSnhqfKwLtf1ZvZ5quTcb98H3jtMv
+           vWnRtLb657kWSkso2kOCwnSnhqfKwLtf1ZvZ5quTcb98H3jtMv
+
+[8/11/14, 11:57:37 PM] dutchmonaco2: TB
+[8/11/14, 11:57:44 PM] dutchmonaco2: OAuth Consumer Key:
+fRFwbtJg4GcoGq6cY6L2gJA7BbM6KbjxHg2ap5tvqkkxoInQLw
+Secret Key:  Xj25bH0knvISF9y2Fa6xtOsgnag9gMvHsVjgLhZEqDcPSx4R59
+
+aws/aws-sdk-php suggests installing doctrine/cache (Adds support for caching of credentials and responses)
+aws/aws-sdk-php suggests installing ext-apc (Allows service description opcode caching, request and response caching, and credentials caching)
+aws/aws-sdk-php suggests installing symfony/yaml (Eases the ability to write manifests for creating jobs in AWS Import/Export)

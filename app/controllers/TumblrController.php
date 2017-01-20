@@ -16,20 +16,28 @@ class TumblrController extends BaseController {
 
             $user = User::where(array(
                 'social_network' => 'tumblr',
-                'name' => $result['response']['user']['name']
+                'name'           => $result['response']['user']['name']
             ))->first();
 
-            if($user) {
-                echo('Existent'); echo('<br>');
-            } else {
+            if(!$user) {
                 $user = User::create(array(
-                    'social_network' => 'tumblr',
-                    'name' => $result['response']['user']['name']
+                    'social_network'  => 'tumblr',
+                    'name'            => $result['response']['user']['name'],
+                    'profile_picture' => "http://api.tumblr.com/v2/blog/{$result['response']['user']['name']}.tumblr.com/avatar/96"
                 ));
-                echo('Just created'); echo('<br>');
             }
 
-            echo("Tumblr user: $user->name");
+            File::put(public_path('profiles') . '/' . "{$user->id}.png", file_get_contents($user->profile_picture));
+
+            Auth::login($user);
+            Session::put('tb_user', $user->id);
+
+            $view = View::make('tfios/closer');
+
+            // $cookie = Cookie::forever('tfios_tb', $user->id);
+            // return Response::make($view)->withCookie($cookie);
+
+            return Response::make($view);
         } else {
             $token = $tumblr->requestRequestToken();
 
